@@ -49,8 +49,9 @@ require '../database.php';
         $adminid = $_SESSION['admin_id'];
         $sql = "INSERT INTO category (name,adminid) VALUES ('$name','$adminid')";
         if (mysqli_query($connection, $sql)) {
-            header("Location: view_categories.php?category_add_success= Category Successfully added.");
-            exit;
+            // header("Location: view_categories.php?category_add_success= Category Successfully added.");
+            // exit;
+            echo "Package successfully added";
         } else {
             header("Location: add_categories.php?category_add_failed= Failed to add the category");
             exit;
@@ -61,10 +62,6 @@ require '../database.php';
         echo $_GET['category_add_failed'];
     }
     ?>
-
-
-
-
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
