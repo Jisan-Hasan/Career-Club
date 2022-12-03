@@ -3,7 +3,7 @@ require 'database.php';
 ?>
 
 <!DOCTYPE html>
-<html data-theme="light" lang="en">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
