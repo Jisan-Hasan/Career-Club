@@ -16,9 +16,9 @@ require '../database.php';
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/w3.css">
 </head>
-
 <body class="w3-pale-yellow">
 
+    <!-- include navbar -->
     <?php
     include 'admin_navbar.php';
     ?>
