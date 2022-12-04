@@ -18,6 +18,7 @@ require '../database.php';
 </head>
 <body class="w3-pale-yellow">
 
+
     <!-- include navbar -->
     <?php
     include 'admin_navbar.php';
