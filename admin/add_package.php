@@ -18,11 +18,9 @@ require '../database.php';
 </head>
 
 <body class="w3-pale-yellow">
-
     <?php
     include 'admin_navbar.php';
     ?>
-
     <br><br>
     <div style="width: 60%" class="container w3-panel w3-card-4 w3-green ">
 
@@ -50,9 +48,7 @@ require '../database.php';
 
     <?php
     // package store into database
-
     if (isset($_POST['submit'])) {
-
         $name = $_POST['package_name'];
         $numberofpost = $_POST['numberof_post'];
         $price = $_POST['package_price'];
@@ -72,7 +68,6 @@ require '../database.php';
         echo $_GET['package_add_failed'];
     }
     ?>
-
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>

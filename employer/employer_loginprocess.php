@@ -12,14 +12,12 @@ if(isset($_POST['employerlogin'])){
     $login_sql="SELECT * FROM employer WHERE email='$email' AND password='$encrypt_password' ";
     $login_result = mysqli_query($connection,$login_sql);
     $employer_row = mysqli_fetch_assoc($login_result);
-
-
+    
     $tday = new DateTime("now", new DateTimeZone('ASIA/DHAKA'));
     $today =$tday->format('Y-m-d H:i:s');
     $bantime=$employer_row['bantime'];
     $today_time = strtotime($today);
-    $expire_time = strtotime($bantime);
-        
+    $expire_time = strtotime($bantime);   
     if($employer_row['email'] == $email && $employer_row['password']== $encrypt_password  ){
         if($employer_row['authentication']!="unverified"){
             if($today_time>$expire_time && $employer_row['status']=='active' ){

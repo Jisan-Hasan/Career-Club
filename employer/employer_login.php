@@ -35,9 +35,7 @@
     </ul>
   </div>
 </nav>
-
 <!-- end nav bar -->
- 
     <br><br><br>
     <div style="width: 60%" class="container w3-panel w3-card-4 w3-green ">
             <h2>Employer Login</h2>
@@ -61,7 +59,6 @@
         </div>
     </div>
 
-  
   <?php
     if(isset($_GET['signup_success'])){
     

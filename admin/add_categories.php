@@ -5,7 +5,6 @@ require '../database.php';
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,9 +15,7 @@ require '../database.php';
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/w3.css">
 </head>
-
 <body class="w3-pale-yellow">
-
     <?php
     include 'admin_navbar.php';
     ?>
@@ -39,8 +36,6 @@ require '../database.php';
     </div>
     </div>
 
-
-
     <?php
     // category store into database
 
@@ -57,12 +52,10 @@ require '../database.php';
             exit;
         }
     }
-
     if (isset($_GET['category_add_failed'])) {
         echo $_GET['category_add_failed'];
     }
     ?>
-
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
