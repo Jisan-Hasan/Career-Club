@@ -64,7 +64,7 @@ require '../database.php';
         <td> <?php echo $row['salary'] ?>k</td>
         <td> <?php echo $row['deadline'] ?></td>
         <td> <?php echo $row['status'] ?></td>
-        <?php if($row['editlimit']==1){ ?>
+        <?php if($row['editlimit']>0){ ?>
         <td>
           <a class="btn btn-warning" href="employer_jobpostedit.php?jobpostid=<?php echo $row['id']; ?>& edit=edit">Edit</a>
         </td>

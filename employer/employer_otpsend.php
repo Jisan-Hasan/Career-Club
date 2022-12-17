@@ -15,7 +15,7 @@
         
 
         $mail->Username = 'universityproject789@gmail.com';      // your mail           
-        $mail->Password = 'wbmvavyxhhmveqgh';                    // mail less secure option password 
+        $mail->Password = 'jfnschrluonetuos';                    // mail less secure option password 
         $mail->SMTPSecure = 'tls';                            
         $mail->Port = 25;                                    
 
