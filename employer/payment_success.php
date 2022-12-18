@@ -71,11 +71,11 @@ if($code == 200 && !( curl_errno($handle)))
 	$validated_on = $result->validated_on;
 	$gw_version = $result->gw_version;
 
-    echo $status."<br>";
-    echo $tran_id."<br>";
-    echo $tran_date."<br>";
-    echo $card_type."<br>";
-    echo $amount."<br>";
+   // echo $status."<br>";
+   // echo $tran_id."<br>";
+   // echo $tran_date."<br>";
+   // echo $card_type."<br>";
+   // echo $amount."<br>";
     
     
     

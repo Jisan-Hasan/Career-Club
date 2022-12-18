@@ -16,7 +16,7 @@ if(isset($_POST['jobpost'])){
     $salary =$_POST['salary'];
     $datetime=$_POST['deadline'];
     $employerid=$_SESSION['employerid'];
-    $editlimit='1';
+    $editlimit='2';
     $status='pending';
 
     
@@ -25,6 +25,7 @@ if(isset($_POST['jobpost'])){
     $packagesql="SELECT * from buypackage where employerid='$employerid' ";
     $packagesqlresult= mysqli_query($connection,$packagesql);
     $packagesql_row=mysqli_fetch_assoc($packagesqlresult);
+    
     if($packagesql_row['numberofpost']>0){
         
         $postsql="INSERT INTO jobpost values('$id', '$title','$companyname','$category','$location','$type','$requirement','$experience','$salary','$employerid','$editlimit','$status','$education','$deadline')";

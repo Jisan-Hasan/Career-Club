@@ -27,3 +27,5 @@ if(isset($_GET['userid']) && isset($_GET['deactivate'])){
     }
 
 }
+
+?>

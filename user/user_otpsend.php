@@ -7,19 +7,18 @@
 
         $mail = new PHPMailer;
 
-        $mail->SMTPDebug = 1;                              
+        $mail->SMTPDebug = 0;                              
 
         $mail->isSMTP();                                     
         $mail->Host = 'smtp.gmail.com';  
         $mail->SMTPAuth = true;                              
-        
-
-        $mail->Username = 'universityproject789@gmail.com';      // your mail           
-        $mail->Password = 'jfnschrluonetuos';                    // mail less secure option password 
+              
+        $mail->Username = 'universityproject789@gmail.com';     // your mail            
+        $mail->Password = 'jfnschrluonetuos';                   // mail less secure option password    
         $mail->SMTPSecure = 'tls';                            
         $mail->Port = 25;                                    
 
-        $mail->setFrom('universityproject789@gmail.com', 'University Project');         // user your above mail
+        $mail->setFrom('universityproject789@gmail.com', 'University Project');     // use your above mail
         $mail->addAddress($email);            
         $mail->isHTML(true);                                  
 
@@ -32,7 +31,7 @@
             echo 'Message could not be sent.';
             echo 'Mailer Error: ' . $mail->ErrorInfo;
         } else {
-            header( "Location: employer_otpverify.php" );
+            header( "Location: user_otpverify.php" );
         }
 
     ?>
