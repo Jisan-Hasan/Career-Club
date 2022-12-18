@@ -1,69 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Login</title>
-
-    <!-- Bootstrap css cdn -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <title> Admin home </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/w3.css">
 </head>
+<body class="w3-pale-yellow">
 
-<body>
-    <!-- navbar start -->
-    <nav class="navbar bg-light">
-        <div class="container">
-            <a href='index.php' class="navbar-brand">CareerClub</a>
-            <div class="d-flex">
-                <a href="admin_signup.php" class="btn btn-outline-success">Sign Up</a>
-            </div>
-        </div>
-    </nav>
-    <!-- navbar end -->
+ <!-- Nav bar -->
 
-    <!-- Admin Credential Input Form Start -->
-    <section>
-        <div class="w-25 mx-auto">
+ <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="index.php">CareerClub</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+      <!--Signup-->
+      <li class="nav-item">
+        <a class="nav-link" href="admin_signup.php">Signup</a>
+      </li>
+      
+    </ul>
+  </div>
+</nav>
+
+<!-- end nav bar -->
+ 
+    <br><br>
+    <div style="width: 60%" class="container w3-panel w3-card-4 w3-green ">
+            <h2>Admin Login</h2>
+            <hr>
             <form action="admin_loginProcess.php" method="post">
-                <h2 class="text-center my-5">Admin Login</h2>
-                <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Email address</label>
-                    <input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="john@Doe.com" aria-describedby="emailHelp" required>
+               <div class="form-group">
+                    <!--<label for="email">Email : </label>-->
+                    <input required type="text" class="form-control" name="email" placeholder="Email">
                 </div>
-                <div class="mb-2">
-                    <label for="exampleInputPassword1" class="form-label">Password</label>
-                    <input type="password" name="password" placeholder="******" class="form-control" id="exampleInputPassword1" required>
-                </div>
-                <div class="mb-3">
-                    <label class="form-check-label">Forgot your password!</label>
-                </div>
-                <div class="d-grid">
-                    <button type="submit" name="adminLogin" class="btn btn-primary">Login</button>
-                </div>
-                <div class="mt-3">
-                    <label class="form-check-label">Don't Have any account? <a href="admin_signup.php">Sign Up</a></label>
-                </div>
+                <div class="form-group">
+               <!--<label for="password">Password : </label>-->
+               <input requirued type="password" class="form-control" name="password" placeholder="Password">
+               </div>
+            <button Type="submit" name="adminLogin" class ="btn btn-info">Submit</button>
+            <br><br>
+            <p>Doesn't have any account. <a href="admin_signup.php" >Sign Up</a></p>
+            
             </form>
+
+          </div>
         </div>
-    </section>
-    <!-- Admin Credential Input Form End -->
+    </div>
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
-    <!-- php code -->
-    <?php
+  <?php
     // Message show
-    if (isset($_GET['signup_success'])) {
-        echo $_GET['signup_success'];
-    } elseif (isset($_GET['login_failed'])) {
-        echo $_GET['login_failed'];
+  
+    if(isset($_GET['signup_success'])){
+    
+      echo $_GET['signup_success'];
+    }
+    elseif(isset($_GET['login_failed'])){
+      echo $_GET['login_failed'];
     }
     ?>
 
-
-    <!-- Bootstrap Script CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 </body>
-
 </html>
